@@ -128,6 +128,6 @@ server.use(/^(?!\/auth).*$/,  (req, res, next) => {
 
 server.use(router)
 
-server.listen(8000, () => {
+server.listen(3310, () => {
   console.log('Run Auth API Server')
 })
