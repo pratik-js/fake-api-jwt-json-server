@@ -30,6 +30,11 @@ function isAuthenticated({email, password}){
   return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
 }
 
+server.get('/test', (req, res) => {
+  console.log("test get==========");
+  res.status(200).json({statu:'ok'})
+});
+
 // Register New User
 server.post('/auth/register', (req, res) => {
   console.log("register endpoint called; request body:");
